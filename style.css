@@ -24,6 +24,7 @@ body{
     grid-template-columns: 200px 4fr;
     grid-template-rows: 150px 3fr;
     height: 100%;
+    overflow: auto;
 }
 
 /******************************
@@ -143,21 +144,40 @@ svg{
 }
 
 .user-pfp,
-.user-pfp-small{
-    background-color: var(--highlight-bg-color);
+.user-pfp-small,
+.trending-user-pfp-small{
     border-radius: 50%;
     display: grid;
     align-items: center;
     justify-items: center;
 }
 
-.user-pfp{
+.user-pfp,
+.user-pfp-small{
+    background-color: var(--highlight-bg-color);
+}
+
+.dog{
+    background-color: green;
+}
+
+.penguin{
+    background-color: pink;
+}
+
+.sheep {
+    background-color: orange;
+}
+
+.user-pfp,
+.trending-user-pfp-small{
     height: 60px;
     width: 60px;
     grid-row: 1 / 3;
 }
 
-.user-pfp-small{
+.user-pfp-small,
+.trending-user-pfp-small{
     height: 40px;
     width: 40px;
 }
@@ -166,7 +186,8 @@ svg{
     width: 40px;
 }
 
-.user-pfp-small img{
+.user-pfp-small img,
+.trending-user-pfp-small img{
     width: 25px;
 }
 
@@ -209,8 +230,9 @@ svg{
     padding: 25px;
     display: grid;
     grid-template-columns: 2fr 350px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 400px 1fr;
     gap: 30px;
+    
 }
 
 .main-heading {
@@ -231,7 +253,8 @@ svg{
 }
 
 .project-card,
-.announcement-card-container  {
+.announcement-card-container,
+.trending-user-container  {
     background-color: white;
     border-radius: 10px;
     padding: 30px;
@@ -251,7 +274,8 @@ svg{
 }
 
 .project-card-body,
-.announcement-body {
+.announcement-body,
+.trending-project {
     color: grey;
 }
 
@@ -289,3 +313,21 @@ svg{
     font-size: 9pt;
 }
 
+.trending-user {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-bottom: 20px;
+    column-gap: 20px;
+}
+
+.trending-user:last-child {
+    padding-bottom: 0px;
+}
+
+.trending-username{
+    font-size: 11pt;
+}
+.trending-project {
+    font-size: 10pt;
+}
