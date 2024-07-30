@@ -209,6 +209,7 @@ svg{
     padding: 25px;
     display: grid;
     grid-template-columns: 2fr 350px;
+    grid-template-rows: 1fr 1fr;
     gap: 30px;
 }
 
@@ -241,7 +242,8 @@ svg{
     border-left: 10px solid var(--highlight-bg-color);
     height: 250px;
     display: grid;
-    grid-template-rows: 1fr fr 1fr;
+    grid-template-rows: 20px 1fr 20px;
+    gap: 5px;
 }
 
 .project-card-heading {
@@ -286,3 +288,4 @@ svg{
 .announcement-body {
     font-size: 9pt;
 }
+
