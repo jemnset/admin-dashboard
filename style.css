@@ -208,12 +208,12 @@ svg{
     z-index:-1;
     padding: 25px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 350px;
     gap: 30px;
 }
 
 .main-heading {
-    font-size: 12pt;   
+    font-size: 14pt;   
     font-weight: 500;
     padding-bottom: 20px;
 }
@@ -229,12 +229,16 @@ svg{
     gap: 20px;
 }
 
-.project-card {
+.project-card,
+.announcement-card-container  {
     background-color: white;
-    border-left: 10px solid var(--highlight-bg-color);
     border-radius: 10px;
     padding: 30px;
     box-shadow: 5px 5px rgb(212, 216, 222);
+}
+
+.project-card {
+    border-left: 10px solid var(--highlight-bg-color);
     height: 250px;
     display: grid;
     grid-template-rows: 1fr fr 1fr;
@@ -244,7 +248,8 @@ svg{
     font-weight: 500;
 }
 
-.project-card-body {
+.project-card-body,
+.announcement-body {
     color: grey;
 }
 
@@ -255,4 +260,29 @@ svg{
     align-self: end;
     justify-self: right;
     padding-top: 20px;
+}
+
+.announcement-card {
+    border-bottom: 1px solid grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.announcement-card:first-child {
+    padding-top: 0px;
+}
+
+.announcement-card:last-child {
+    border-bottom: none; 
+    padding-bottom: 0px;
+}
+
+.announcement-heading {
+    font-weight: 500;
+    font-size: 10pt;
+    padding-bottom: 5px;
+}
+
+.announcement-body {
+    font-size: 9pt;
 }
